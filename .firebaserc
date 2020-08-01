@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "distrappweb": {
+      "hosting": {
+        "distribuidor": [
+          "distrappweb"
+        ]
+      }
+    }
+  }
+}
