@@ -1,25 +1,41 @@
-
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { AuthService } from '../services/auth.service'
+
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { User } from 'firebase';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
-  providers:[AuthService],
+  styleUrls: ['./register.component.scss'],
 })
-export class RegisterComponent implements OnInit {
-registerForm = new FormGroup({
-  email: new FormControl(''),
-  password: new FormControl(''),
-});
-  constructor( private authSvc: AuthService) { }
+export class RegisterComponent {
+  registerForm = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl(''),
+  });
 
-  ngOnInit(): void {
+  constructor(private authSvc: AuthService, private router: Router) {}
+
+  async onRegister() {
+    const { email, password } = this.registerForm.value;
+    try {
+      const user = await this.authSvc.register(email, password);
+      if (user) {
+        this.checkUserIsVerified(user);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  onRegister(){
-const { email,password}= this.registerForm.value;
-this.authSvc.register(email,password);
+  private checkUserIsVerified(user: User) {
+    if (user && user.emailVerified) {
+      this.router.navigate(['/home']);
+    } else if (user) {
+      this.router.navigate(['/verification-email']);
+    } else {
+      this.router.navigate(['/register']);
+    }
   }
 }

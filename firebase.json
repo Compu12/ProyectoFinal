@@ -1,8 +1,8 @@
 {
   "hosting": [
     {
-      "target": "distribuidor",
-      "public": "dist/distribuidor",
+      "target": "deberAutenticacion",
+      "public": "dist/deberAutenticacion",
       "ignore": [
         "**/.*"
       ],

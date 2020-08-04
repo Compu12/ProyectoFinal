@@ -4,16 +4,15 @@
 
 export const environment = {
   production: false,
-  firebaseConfig: {
-    apiKey: "AIzaSyAChu3S1I8Uc0NIZVZMQ5pIm2mFS87eg7w",
-    authDomain: "distrappweb.firebaseapp.com",
-    databaseURL: "https://distrappweb.firebaseio.com",
-    projectId: "distrappweb",
-    storageBucket: "distrappweb.appspot.com",
-    messagingSenderId: "83980362810",
-    appId: "1:83980362810:web:da0bb5f5ce507cd4d88103",
-    measurementId: "G-ZG0M8724XZ"
-  }
+  firebaseConfig : {
+    apiKey: "AIzaSyCiFTwiA7EX4Q1tlPj_TUSkm9Af_MFQoV0",
+    authDomain: "proyectodesarrollo3-196a3.firebaseapp.com",
+    databaseURL: "https://proyectodesarrollo3-196a3.firebaseio.com",
+    projectId: "proyectodesarrollo3-196a3",
+    storageBucket: "proyectodesarrollo3-196a3.appspot.com",
+    messagingSenderId: "833594331447",
+    appId: "1:833594331447:web:6b48e87d897268042c0ab2"
+  },
 };
 
 /*

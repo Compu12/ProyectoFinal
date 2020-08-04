@@ -1,9 +1,9 @@
 {
   "targets": {
-    "distrappweb": {
+    "login-ng-e2417": {
       "hosting": {
-        "distribuidor": [
-          "distrappweb"
+        "deberAutenticacion": [
+          "login-ng-e2417"
         ]
       }
     }
