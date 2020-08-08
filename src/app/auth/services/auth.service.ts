@@ -2,6 +2,8 @@ import { User } from 'firebase';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
+
+import { AngularFireDatabase } from '@angular/fire/database';
 import {
   AngularFirestoreDocument,
 } from '@angular/fire/firestore';
@@ -9,7 +11,7 @@ import {
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
-  constructor(public afAuth: AngularFireAuth) {
+  constructor(public afAuth: AngularFireAuth,public afDB: AngularFireDatabase) {
     
   }
 
@@ -34,6 +36,7 @@ export class AuthService {
 
   async sendVerificationEmail(): Promise<void> {
     return (await this.afAuth.currentUser).sendEmailVerification();
+    
   }
 
   async login(email: string, password: string): Promise<User> {
@@ -55,7 +58,9 @@ export class AuthService {
         password
       );
       await this.sendVerificationEmail();
+      
       return user;
+
     } catch (error) {
       console.log(error);
     }
@@ -68,5 +73,6 @@ export class AuthService {
       console.log(error);
     }
   }
+  
 }
 
