@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { User } from 'firebase';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -33,6 +34,7 @@ export class LoginComponent {
       const user = await this.authSvc.login(email, password);
       if (user) {
         this.checkUserIsVerified(user);
+        
       }
     } catch (error) {
       console.log(error);
@@ -41,7 +43,7 @@ export class LoginComponent {
 
   private checkUserIsVerified(user: User) {
     if (user && user.emailVerified) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/main']);
     } else if (user) {
       this.router.navigate(['/verification-email']);
     } else {

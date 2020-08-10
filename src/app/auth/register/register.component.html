@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="row">
     <div class="col-md-6 mx-auto mt-5">
       <div class="card">
@@ -14,14 +15,14 @@
             </div>
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" class="form-control" formControlName="password"/>
+              <input type="password" class="form-control" autocomplete="on" formControlName="password"/>
             </div>
             <button type="submit" class="btn btn-primary btn-lg btn-block">
               Registrarse
             </button>
           </form>
           <div class="form-group mt-3">
-            <p>Tiene usted una cuenta?<a [routerLink]="['/deberAutenticacion']"> Ingresar </a></p>
+            <p>Tiene usted una cuenta?<a [routerLink]="['/login']"> Ingresar </a></p>
           </div>
         </div>
       </div>

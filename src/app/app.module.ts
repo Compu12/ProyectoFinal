@@ -1,7 +1,8 @@
 import { environment } from './../environments/environment';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,9 +12,23 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule, BUCKET } from '@angular/fire/storage';
 import { SendEmailComponent } from './auth/send-email/send-email.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { LoginComponent } from './auth/login/login.component';
+
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './auth/register/register.component';
+
+
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, SendEmailComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    SendEmailComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -23,5 +38,6 @@ import { SendEmailComponent } from './auth/send-email/send-email.component';
     AngularFireStorageModule,
   ],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
-export class AppModule {}
+export class AppModule { }

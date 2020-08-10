@@ -45,7 +45,9 @@ export class AuthService {
         email,
         password
       );
+      console.log(user.emailVerified);
       return user;
+     
     } catch (error) {
       console.log(error);
     }
@@ -53,11 +55,11 @@ export class AuthService {
 
   async register(email: string, password: string): Promise<User> {
     try {
-      const { user } = await this.afAuth.createUserWithEmailAndPassword(
+      var { user } = await this.afAuth.createUserWithEmailAndPassword(
         email,
         password
       );
-      await this.sendVerificationEmail();
+    await this.sendVerificationEmail();
       
       return user;
 

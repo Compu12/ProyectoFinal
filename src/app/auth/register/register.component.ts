@@ -40,8 +40,8 @@ export class RegisterComponent {
     this.afDB.database.ref('Usuarios/' + id).set({
       nombreT: nombreT,
       email: email,
-      password: password
-
+      password: password,
+      perfil:2
     });
     
 

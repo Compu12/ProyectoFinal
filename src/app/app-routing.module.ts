@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SendEmailComponent } from './auth/send-email/send-email.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+
+import { MainComponent } from './main/main.component';
 
 
 const routes: Routes = [
@@ -9,18 +14,11 @@ const routes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full',
   },
-  { path: 'home', 
-  loadChildren: () => import('./home/home.module').then(m => m.HomeModule) }, 
-  { path: 'deberAutenticacion', 
-  loadChildren: () => 
-  import('./auth/login/login.module').then(m => m.LoginModule) }, 
-  { path: 'register', 
-  loadChildren: () => import('./auth/register/register.module').then(m => m.RegisterModule) },
-  {
-    path: 'verification-email',
-    component: SendEmailComponent,
-  },
-  { path: 'forgot-pasword', loadChildren: () => import('./auth/forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule) }
+  { path: 'home',component: HomeComponent }, 
+  { path: 'login',component: LoginComponent  }, 
+  { path: 'register',component: RegisterComponent },
+  { path: 'verification-email',component: SendEmailComponent,},
+  { path: 'main',component: MainComponent }
 ];
 
 @NgModule({
