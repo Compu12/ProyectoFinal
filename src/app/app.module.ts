@@ -45,6 +45,7 @@ import { InicioComponent } from './inicio/inicio.component';
     AngularFireAuthModule,
     AngularFireStorageModule,
   ],
+  providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
