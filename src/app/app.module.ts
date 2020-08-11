@@ -20,6 +20,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 
@@ -33,7 +34,8 @@ import { MainComponent } from './main/main.component';
     HomeComponent,
     SidebarComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
