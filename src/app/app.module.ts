@@ -17,6 +17,9 @@ import { LoginComponent } from './auth/login/login.component';
 
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FooterComponent } from './footer/footer.component';
+import { MainComponent } from './main/main.component';
 
 
 
@@ -27,7 +30,10 @@ import { RegisterComponent } from './auth/register/register.component';
     SendEmailComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    SidebarComponent,
+    FooterComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

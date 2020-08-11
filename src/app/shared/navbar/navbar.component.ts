@@ -8,7 +8,7 @@ import { User } from 'firebase';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
   public user$: Observable<User> = this.authSvc.afAuth.user;

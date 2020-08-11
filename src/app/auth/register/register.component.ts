@@ -9,7 +9,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss'],
+  styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent {
   registerForm = new FormGroup({
@@ -30,6 +30,7 @@ export class RegisterComponent {
       }
     } catch (error) {
       console.log(error);
+    
     }
   }
 
