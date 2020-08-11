@@ -37,6 +37,7 @@ import { RegisterComponent } from './auth/register/register.component';
     AngularFireAuthModule,
     AngularFireStorageModule,
   ],
+  providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
