@@ -22,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProductosComponent } from './productos/productos.component';
+import { NavbarMainComponent } from './navbar-main/navbar-main.component';
 
 
 
@@ -37,7 +38,8 @@ import { ProductosComponent } from './productos/productos.component';
     FooterComponent,
     MainComponent,
     InicioComponent,
-    ProductosComponent
+    ProductosComponent,
+    NavbarMainComponent
   ],
   imports: [
     BrowserModule,
