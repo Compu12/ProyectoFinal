@@ -6,6 +6,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 
 import { MainComponent } from './main/main.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { ProductosComponent } from './productos/productos.component';
 
 
 const routes: Routes = [
@@ -15,8 +17,15 @@ const routes: Routes = [
   { path: 'login',component: LoginComponent  }, 
   { path: 'register',component: RegisterComponent },
   { path: 'verification-email',component: SendEmailComponent,},
-  { path: 'main',component: MainComponent }
+  { path: 'main',component: MainComponent,
+  children:[
+    {path:'', component:InicioComponent},
+    {path:'productos', component:ProductosComponent}
+  ]
+},
+
 ];
+  
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

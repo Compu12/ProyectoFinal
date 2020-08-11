@@ -21,6 +21,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { ProductosComponent } from './productos/productos.component';
 
 
 
@@ -35,7 +36,8 @@ import { InicioComponent } from './inicio/inicio.component';
     SidebarComponent,
     FooterComponent,
     MainComponent,
-    InicioComponent
+    InicioComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
