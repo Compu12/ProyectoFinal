@@ -45,7 +45,7 @@ export class AuthService {
         email,
         password
       );
-      console.log(user.emailVerified);
+    
       return user;
      
     } catch (error) {
