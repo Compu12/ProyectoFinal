@@ -139,5 +139,8 @@
       }
     }
   },
-  "defaultProject": "deberAutenticacion"
+  "defaultProject": "deberAutenticacion",
+  "cli": {
+    "analytics": "76e36970-feb0-49aa-ad29-706d5a3b2ee4"
+  }
 }

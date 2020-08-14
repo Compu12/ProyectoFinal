@@ -1,5 +1,6 @@
 import { environment } from './../environments/environment';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -23,8 +24,18 @@ import { MainComponent } from './main/main.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProductosComponent } from './productos/productos.component';
 import { NavbarMainComponent } from './navbar-main/navbar-main.component';
+import { CafeComponent } from './cafe/cafe.component';
+import { GalletasComponent } from './galletas/galletas.component';
 
+//FIREBASE conexion angular
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+//COMPONENTES
+import { ProductsComponent } from './components/products/products.component';
+import { ProductListComponent } from './components/products/product-list/product-list.component';
+import { ProductComponent } from './components/products/product/product.component';
 
+//SERVICIOS
+import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +50,12 @@ import { NavbarMainComponent } from './navbar-main/navbar-main.component';
     MainComponent,
     InicioComponent,
     ProductosComponent,
-    NavbarMainComponent
+    NavbarMainComponent,
+    CafeComponent,
+    GalletasComponent,
+    ProductsComponent,
+    ProductListComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -48,8 +64,12 @@ import { NavbarMainComponent } from './navbar-main/navbar-main.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireStorageModule,
+    AngularFireDatabaseModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    ProductService
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
