@@ -50,9 +50,9 @@ export class RegisterComponent {
   }
 
   private guardarDatosBD(numeroPermiso: string, ruc: string, nombreComercial: string, representanteLegal: string, tipoEstablecimiento: string, telefono: string, direccion: string, email: string, password: string, uid: string) {
-    var id = uid;
-    console.log(id);
-    this.afDB.database.ref('Usuarios/' + id).set({
+   
+  
+    this.afDB.database.ref('Usuarios/' + uid).set({
       numeroPermiso: numeroPermiso,
       ruc: ruc,
       nombreComercial: nombreComercial,
